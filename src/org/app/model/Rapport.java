@@ -34,10 +34,14 @@ public class Rapport {
 	private Date date;
 	@Column(name="fld_title",length=50)
 	private String title;
+	@Column(name="fld_email",length=50)
+	private String email;
 	@Column(name="fld_description",length=4096)
 	private String description;
 	@Column(name="fld_comment",length=2048)
 	private String comment;
+	@Column(name="fld_note",length=2048)
+	private String note;
 	
 	/**
 	 * 
@@ -60,6 +64,29 @@ public class Rapport {
 		this.title = title;
 		this.description = description;
 		this.comment = comment;
+	}
+	
+	
+
+	/**
+	 * @param author
+	 * @param date
+	 * @param title
+	 * @param email
+	 * @param description
+	 * @param comment
+	 * @param note
+	 */
+	public Rapport(String author, Date date, String title, String email, String description, String comment,
+			String note) {
+		super();
+		this.author = author;
+		this.date = date;
+		this.title = title;
+		this.email = email;
+		this.description = description;
+		this.comment = comment;
+		this.note = note;
 	}
 
 	/**
@@ -145,7 +172,35 @@ public class Rapport {
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
+    
+	/**
+	 * @return the email
+	 */
+	public String getEmail() {
+		return email;
+	}
 
+	/**
+	 * @param email the email to set
+	 */
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	/**
+	 * @return the note
+	 */
+	public String getNote() {
+		return note;
+	}
+
+	/**
+	 * @param note the note to set
+	 */
+	public void setNote(String note) {
+		this.note = note;
+	}
+ 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#hashCode()
 	 */
