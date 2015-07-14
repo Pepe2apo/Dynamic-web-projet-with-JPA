@@ -33,4 +33,11 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>build/classes</name>
+			<type>2</type>
+			<location>C:/DevProgramme/Tomcat_8/apache-tomcat-8.0.24/webapps/primoWebDynamicProjet/WEB-INF/classes</location>
+		</link>
+	</linkedResources>
 </projectDescription>

@@ -46,9 +46,9 @@ public class RapportJour extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
          //recupere les parametre 
-	
+	  System.out.println("dfkldlfdf") ;
 		String author = request.getParameter("author");
-		
+		   
 		String dateString = request.getParameter("date");
 		DateFormat formatDate = new SimpleDateFormat("yyyy-MM-dd");
 		Date date = null;
@@ -57,7 +57,7 @@ public class RapportJour extends HttpServlet {
 		} catch (ParseException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
-		}
+		}    
 
 		String title = request.getParameter("title");
 		String description = request.getParameter("description");
