@@ -1,26 +1,17 @@
 package org.app;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.sql.DataSource;
-
 import org.app.model.Rapport;
 
 /**
@@ -43,6 +34,7 @@ public class RapportJour extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
          //recupere les parametre 
@@ -66,14 +58,13 @@ public class RapportJour extends HttpServlet {
 
 			EntityManager  em = (EntityManager) request.getServletContext().getAttribute("em");
 			
-			response.getWriter()
-			.append("Served at: ")
-			.append(request.getContextPath())
-			.append("  is open "+em.isOpen());
+			
 			try {
 				em.getTransaction().begin();
 				em.persist(new Rapport(author, date, title, description, comment));
 				em.getTransaction().commit();
+				//request.getRequestDispatcher("afficher.jsp");
+				response.sendRedirect("pages/afficher.jsp");
 			} catch (Exception e) {
 				e.printStackTrace(response.getWriter());
 				em.getTransaction().rollback();
@@ -88,6 +79,7 @@ public class RapportJour extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);

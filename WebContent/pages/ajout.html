@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1" name="viewport" >
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+ <div> </div> 
+   
+   <div  class="panel panel-success ">
+   <div class="panel-heading">Ajout du rapport</div>
+   <div class="panel-body container-fluid">
+		<form action="/primoWebDynamicProjet/RapportJour" method="post" class="form-horizontal" role="form" enctype="application/x-www-form-urlencoded">
+			<div class="form-group-sm">
+        		<label for="nom">Nom author :</label>
+       				 <input name="author" type="text" id="nom" class="form-control" />
+   		    </div>
+   		    <div class="form-group-sm">
+        		<label for="nom">Date :</label>
+       				 <input name="date" type="date" id="date" class="form-control"/>
+   		    </div>
+   		    <div class="form-group-sm">
+        		<label for="nom">Title :</label>
+       				 <input type="text" name="title" id="title" class="form-control"/>
+   		    </div>
+   		   
+            <div class="form-group-sm">
+        		<label for="courriel">Courriel :</label>
+        			<input name="date" type="email" id="courriel" class="form-control" />
+    		</div>
+    		
+    		<div class="form-group-sm">
+        		<label for="message">Description :</label>
+        		<textarea name="description" id="description" class="form-control"></textarea>	
+    		</div>
+    	<div class="form-group-sm">
+        		<label for="message">Comment :</label>
+        		<textarea name="comment" id="comment" class="form-control"></textarea>	
+    		</div>
+    		
+    		<div class="form-group-sm">
+        		<label for="message">Note :</label>
+        		<textarea name="note" id="note" class="form-control"></textarea>	
+    		</div>
+    		
+    		<div class="form-group-sm">
+                <button type="submit" class="btn btn-primary">Enregistrer</button>
+                 <a href="afficher.jsp" class="btn btn-primary">Afficher</a>
+           </div>
+
+		</form>
+		</div>
+    </div>
+    
+   <div> </div> 
+</body>
+</html>
