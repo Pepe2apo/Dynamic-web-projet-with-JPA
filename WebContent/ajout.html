@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="ISO-8859-1" name="viewport" >
 <title>Insert title here</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -13,47 +13,52 @@
 
 </head>
 <body>
-  <h1>Bienvenue sur mon site de recueils de rapports</h1>
-   
-		<form action="/ma-page-de-traitement" method="post">
-			<div>
+ <div> </div>
+   <div  class="panel panel-success ">
+   <div class="panel-heading">Ajout du rapport</div>
+   <div class="panel-body container-fluid">
+		<form action="/ma-page-de-traitement" method="post" class="form-horizontal" role="form">
+			<div class="form-group-sm">
         		<label for="nom">Nom author :</label>
-       				 <input type="text" id="nom" />
+       				 <input type="text" id="nom" class="form-control" />
    		    </div>
-   		    <div>
+   		    <div class="form-group-sm">
         		<label for="nom">Date :</label>
-       				 <input type="date" id="date" />
+       				 <input type="date" id="date" class="form-control"/>
    		    </div>
-   		    <div>
+   		    <div class="form-group-sm">
         		<label for="nom">Title :</label>
-       				 <input type="text" id="title" />
+       				 <input type="text" id="title" class="form-control"/>
    		    </div>
    		   
-            <div>
+            <div class="form-group-sm">
         		<label for="courriel">Courriel :</label>
-        			<input type="email" id="courriel" />
+        			<input type="email" id="courriel" class="form-control" />
     		</div>
     		
-    		<div>
+    		<div class="form-group-sm">
         		<label for="message">Description :</label>
-        		<textarea id="description"></textarea>	
+        		<textarea id="description" class="form-control"></textarea>	
     		</div>
     		
-    		<div>
+    		<div class="form-group-sm">
         		<label for="message">Comment :</label>
-        		<textarea id="comment"></textarea>	
+        		<textarea id="comment" class="form-control"></textarea>	
     		</div>
     		
-    		<div>
+    		<div class="form-group-sm">
         		<label for="message">Note :</label>
-        		<textarea id="note"></textarea>	
+        		<textarea id="note" class="form-control"></textarea>	
     		</div>
     		
-    		<div class="button">
-                <button type="submit">Ajouter</button>
+    		<div class="form-group-sm">
+                <button type="submit" class="btn btn-primary">Ajouter</button>
            </div>
 
 		</form>
+		</div>
+    </div>
     
+   <div> </div> 
 </body>
 </html>
